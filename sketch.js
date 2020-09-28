@@ -5,7 +5,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 
-var paper,bin,ground,paperSprite,objectSprite;
+var paper,bin,grnd;
 
 
 
@@ -21,9 +21,10 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paperSprite = createSprite(200,200,50,50);
+	ground = new Ground(400,650,800,20)
 
 
+     paper1= new Paper(100,100,20)
 	 
 	
 
@@ -36,8 +37,7 @@ function draw() {
   rectMode(CENTER);
   background(0);
   
-
-
+   paper1.display();
 
   drawSprites();
  
